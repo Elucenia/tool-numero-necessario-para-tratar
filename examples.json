@@ -1,0 +1,92 @@
+[
+  {
+    "label": "Controle 20/100, tratado 10/100: RRA 10%, RRR 50%, NNT 10 (IC da RRA 0,2% a 19,8%)",
+    "input": {
+      "ec": 20,
+      "nc": 100,
+      "et": 10,
+      "nt": 100
+    },
+    "expected": {
+      "raw": {
+        "arr": 10,
+        "rrr": 50,
+        "shown": 10,
+        "arrLo": 0.2,
+        "arrHi": 19.8
+      },
+      "main": "10",
+      "level": "low"
+    },
+    "originalInput": {
+      "ec": 20,
+      "nc": 100,
+      "et": 10,
+      "nt": 100
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Controle 10/100, tratado 15/100: RRA −5%, NNH 20",
+    "input": {
+      "ec": 10,
+      "nc": 100,
+      "et": 15,
+      "nt": 100
+    },
+    "expected": {
+      "raw": {
+        "arr": -5,
+        "shown": 20
+      },
+      "level": "high",
+      "verdict": "dano"
+    },
+    "originalInput": {
+      "ec": 10,
+      "nc": 100,
+      "et": 15,
+      "nt": 100
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Riscos iguais (10/100 e 10/100): NNT infinito",
+    "input": {
+      "ec": 10,
+      "nc": 100,
+      "et": 10,
+      "nt": 100
+    },
+    "expected": {
+      "main": "∞",
+      "verdict": "sem diferença"
+    },
+    "originalInput": {
+      "ec": 10,
+      "nc": 100,
+      "et": 10,
+      "nt": 100
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Mais eventos que participantes: erro",
+    "input": {
+      "ec": 120,
+      "nc": 100,
+      "et": 10,
+      "nt": 100
+    },
+    "expected": {
+      "error": true
+    },
+    "originalInput": {
+      "ec": 120,
+      "nc": 100,
+      "et": 10,
+      "nt": 100
+    },
+    "expandedZeroOptions": []
+  }
+]

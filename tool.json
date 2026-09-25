@@ -1,0 +1,213 @@
+{
+  "tool": {
+    "id": "numero-necessario-para-tratar",
+    "title": "NNT e NNH (número necessário para tratar)",
+    "short": "NNT, RRA, RRR e risco relativo de um ensaio clínico",
+    "spec": [
+      "medicina-preventiva-e-social",
+      "medicina-de-familia-e-comunidade",
+      "clinica-medica"
+    ],
+    "tier": 1,
+    "desc": "Calcule o NNT (ou NNH), a redução absoluta e relativa do risco e o risco relativo a partir dos eventos nos grupos tratado e controle, com IC 95%.",
+    "lead": "Traduz o resultado de um ensaio clínico ou coorte em quantos pacientes precisam ser tratados para evitar (NNT) ou causar (NNH) um evento a mais que o controle.",
+    "fields": [
+      [
+        "ec",
+        "Eventos no grupo controle",
+        "num",
+        {
+          "min": 0,
+          "max": 1000000,
+          "step": 1,
+          "ph": "20"
+        }
+      ],
+      [
+        "nc",
+        "Total de participantes do grupo controle",
+        "num",
+        {
+          "min": 1,
+          "max": 1000000,
+          "step": 1,
+          "ph": "100"
+        }
+      ],
+      [
+        "et",
+        "Eventos no grupo tratado (intervenção)",
+        "num",
+        {
+          "min": 0,
+          "max": 1000000,
+          "step": 1,
+          "ph": "10"
+        }
+      ],
+      [
+        "nt",
+        "Total de participantes do grupo tratado",
+        "num",
+        {
+          "min": 1,
+          "max": 1000000,
+          "step": 1,
+          "ph": "100"
+        }
+      ]
+    ],
+    "formula": "<p>RC = eventos/total no controle · RT = eventos/total no tratado · <strong>RRA</strong> = RC − RT · <strong>RRR</strong> = RRA / RC · <strong>RR</strong> = RT / RC.</p><p><strong>NNT</strong> = 1 / RRA, arredondado para cima. Se o tratamento aumenta o evento (RRA negativa), o resultado é o <strong>NNH</strong> = 1 / |RRA|.</p><p>IC 95% da RRA pelo método de Wald: RRA ± 1,96 × √[RC(1 − RC)/n<sub>C</sub> + RT(1 − RT)/n<sub>T</sub>]. O IC do NNT é o inverso dos limites (Altman, 1998); se a RRA inclui zero, o IC do NNT vai do benefício ao infinito e ao dano.</p>",
+    "table": [
+      [
+        "Medida",
+        "O que informa"
+      ],
+      [
+        "RRA",
+        "Diferença absoluta de risco: depende do risco basal"
+      ],
+      [
+        "RRR",
+        "Proporção do risco basal que é evitada: costuma ser estável entre populações"
+      ],
+      [
+        "NNT",
+        "Pacientes tratados, pelo tempo do estudo, para evitar 1 evento"
+      ],
+      [
+        "NNH",
+        "Pacientes tratados para causar 1 evento adverso a mais"
+      ]
+    ],
+    "tips": [
+      "Informe sempre o <strong>tempo de seguimento</strong>: um NNT de 50 em 5 anos não é comparável a um NNT de 50 em 6 meses.",
+      "A RRR costuma ser semelhante entre populações, mas o NNT não: para o seu paciente, estime NNT ≈ 1 / (risco basal individual × RRR).",
+      "RRR impressionante com risco basal baixo gera NNT alto: desconfie de propagandas que só mostram a redução relativa.",
+      "Compare o NNT do benefício com o NNH dos efeitos adversos relevantes do mesmo tratamento antes de decidir.",
+      "Quando o IC da RRA inclui zero, o efeito não é significativo e o NNT não deve ser apresentado sem o intervalo."
+    ],
+    "sources": [
+      [
+        "Laupacis A, Sackett DL, Roberts RS. An assessment of clinically useful measures of the consequences of treatment. N Engl J Med, 1988.",
+        "https://doi.org/10.1056/NEJM198806303182605"
+      ],
+      [
+        "Altman DG. Confidence intervals for the number needed to treat. BMJ, 1998.",
+        "https://doi.org/10.1136/bmj.317.7168.1309"
+      ]
+    ],
+    "cases": [
+      [
+        "Controle 20/100, tratado 10/100: RRA 10%, RRR 50%, NNT 10 (IC da RRA 0,2% a 19,8%)",
+        {
+          "ec": 20,
+          "nc": 100,
+          "et": 10,
+          "nt": 100
+        },
+        {
+          "raw": {
+            "arr": 10,
+            "rrr": 50,
+            "shown": 10,
+            "arrLo": 0.2,
+            "arrHi": 19.8
+          },
+          "main": "10",
+          "level": "low"
+        }
+      ],
+      [
+        "Controle 10/100, tratado 15/100: RRA −5%, NNH 20",
+        {
+          "ec": 10,
+          "nc": 100,
+          "et": 15,
+          "nt": 100
+        },
+        {
+          "raw": {
+            "arr": -5,
+            "shown": 20
+          },
+          "level": "high",
+          "verdict": "dano"
+        }
+      ],
+      [
+        "Riscos iguais (10/100 e 10/100): NNT infinito",
+        {
+          "ec": 10,
+          "nc": 100,
+          "et": 10,
+          "nt": 100
+        },
+        {
+          "main": "∞",
+          "verdict": "sem diferença"
+        }
+      ],
+      [
+        "Mais eventos que participantes: erro",
+        {
+          "ec": 120,
+          "nc": 100,
+          "et": 10,
+          "nt": 100
+        },
+        {
+          "error": true
+        }
+      ]
+    ],
+    "batch": "saude-coletiva",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "saude-coletiva",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/saude-coletiva.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 1,
+      "passed": 1,
+      "cases": [
+        {
+          "label": "Risco30% para10%: RRA20% e NNT5",
+          "input": {
+            "ec": 30,
+            "nc": 100,
+            "et": 10,
+            "nt": 100
+          },
+          "expected": {
+            "arr": 20,
+            "shown": 5
+          },
+          "status": "passed",
+          "failures": []
+        }
+      ]
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/saude-coletiva.php",
+    "sha256": "5f081943f8faff99f4a6ac07fc16af6d7f8e6aa64d874af2d00ed8bae97da6a2",
+    "bytes": 77577
+  },
+  "clinicalValidation": "not-performed"
+}
