@@ -1,11 +1,11 @@
-/* tool-numero-necessario-para-tratar · Elucenia · https://github.com/Elucenia/tool-numero-necessario-para-tratar
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-numero-necessario-para-tratar · ELUCENIA · https://github.com/Elucenia/tool-numero-necessario-para-tratar
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"numero-necessario-para-tratar","title":"NNT e NNH (número necessário para tratar)","fields":[["ec","Eventos no grupo controle","num",{"min":0,"max":1000000,"step":1,"ph":"20"}],["nc","Total de participantes do grupo controle","num",{"min":1,"max":1000000,"step":1,"ph":"100"}],["et","Eventos no grupo tratado (intervenção)","num",{"min":0,"max":1000000,"step":1,"ph":"10"}],["nt","Total de participantes do grupo tratado","num",{"min":1,"max":1000000,"step":1,"ph":"100"}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};

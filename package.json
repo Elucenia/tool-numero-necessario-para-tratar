@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-numero-necessario-para-tratar",
   "version": "0.1.0",
-  "description": "NNT e NNH (número necessário para tratar) · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "NNT e NNH (número necessário para tratar) · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
