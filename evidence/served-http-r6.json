@@ -1,0 +1,958 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "numero-necessario-para-tratar",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/numero-necessario-para-tratar/calculator.js",
+    "sha256": "ccc995c68ea43219632abe9a1c6cefcb1274756c5a7d4b8d068c11bf2fa102fd",
+    "bytes": 7744
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 4,
+    "replayed": 4,
+    "passed": 4,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "numero-necessario-para-tratar",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "Controle 20/100, tratado 10/100: RRA 10%, RRR 50%, NNT 10 (IC da RRA 0,2% a 19,8%)",
+      "originalInput": {
+        "ec": 20,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "input": {
+        "ec": 20,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "arr": 10,
+          "rrr": 50,
+          "shown": 10,
+          "arrLo": 0.2,
+          "arrHi": 19.8
+        },
+        "main": "10",
+        "level": "low"
+      },
+      "recordedResult": {
+        "main": [
+          "10",
+          "pacientes"
+        ],
+        "label": "NNT (número necessário para tratar)",
+        "raw": {
+          "arr": 10,
+          "rrr": 50,
+          "nnt": 10,
+          "shown": 10,
+          "arrLo": 0.2001799999999998,
+          "arrHi": 19.79982
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "ec": 20,
+            "nc": 100,
+            "et": 10,
+            "nt": 100
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+          "startedAt": "2026-10-05T17:39:17.820Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "numero-necessario-para-tratar",
+              "main": [
+                "10",
+                "pacientes"
+              ],
+              "label": "NNT (número necessário para tratar)",
+              "raw": {
+                "arr": 10,
+                "rrr": 50,
+                "nnt": 10,
+                "shown": 10,
+                "arrLo": 0.2001799999999998,
+                "arrHi": 19.79982
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "09b11fce24f2a9b23075e268365da87aabc1cde72bfb0cde5b9a9826ae34cc8f",
+          "bytes": 250,
+          "elapsedMs": 3.837599999998929
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+        "startedAt": "2026-10-05T17:39:17.820Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "numero-necessario-para-tratar",
+            "main": [
+              "10",
+              "pacientes"
+            ],
+            "label": "NNT (número necessário para tratar)",
+            "raw": {
+              "arr": 10,
+              "rrr": 50,
+              "nnt": 10,
+              "shown": 10,
+              "arrLo": 0.2001799999999998,
+              "arrHi": 19.79982
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "09b11fce24f2a9b23075e268365da87aabc1cde72bfb0cde5b9a9826ae34cc8f",
+        "bytes": 250,
+        "elapsedMs": 3.837599999998929
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "10",
+            "obtained": "10",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.arr",
+            "expected": 10,
+            "obtained": 10,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.rrr",
+            "expected": 50,
+            "obtained": 50,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.shown",
+            "expected": 10,
+            "obtained": 10,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.arrLo",
+            "expected": 0.2,
+            "obtained": 0.2001799999999998,
+            "tolerance": 0.050000010000000004,
+            "difference": 0.00017999999999979144,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.arrHi",
+            "expected": 19.8,
+            "obtained": 19.79982,
+            "tolerance": 0.050000010000000004,
+            "difference": 0.00018000000000029104,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.arr",
+            "expected": 10,
+            "obtained": 10,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.rrr",
+            "expected": 50,
+            "obtained": 50,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.nnt",
+            "expected": 10,
+            "obtained": 10,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.shown",
+            "expected": 10,
+            "obtained": 10,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.arrLo",
+            "expected": 0.2001799999999998,
+            "obtained": 0.2001799999999998,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.arrHi",
+            "expected": 19.79982,
+            "obtained": 19.79982,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "10",
+            "obtained": "10",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "pacientes",
+            "obtained": "pacientes",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "numero-necessario-para-tratar",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "Controle 10/100, tratado 15/100: RRA −5%, NNH 20",
+      "originalInput": {
+        "ec": 10,
+        "nc": 100,
+        "et": 15,
+        "nt": 100
+      },
+      "input": {
+        "ec": 10,
+        "nc": 100,
+        "et": 15,
+        "nt": 100
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "arr": -5,
+          "shown": 20
+        },
+        "level": "high",
+        "verdict": "dano"
+      },
+      "recordedResult": {
+        "main": [
+          "20",
+          "pacientes"
+        ],
+        "label": "NNH (número necessário para causar dano)",
+        "raw": {
+          "arr": -4.999999999999999,
+          "rrr": -49.999999999999986,
+          "nnt": 20.000000000000004,
+          "shown": 20,
+          "arrLo": -14.140663579204082,
+          "arrHi": 4.1406635792040865
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "ec": 10,
+            "nc": 100,
+            "et": 15,
+            "nt": 100
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+          "startedAt": "2026-10-05T17:39:18.135Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "numero-necessario-para-tratar",
+              "main": [
+                "20",
+                "pacientes"
+              ],
+              "label": "NNH (número necessário para causar dano)",
+              "raw": {
+                "arr": -4.999999999999999,
+                "rrr": -49.999999999999986,
+                "nnt": 20.000000000000004,
+                "shown": 20,
+                "arrLo": -14.140663579204082,
+                "arrHi": 4.1406635792040865
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "b2b3b39f706f8cf704402c07275920b971e891302a3ac19292009eb1e22c2145",
+          "bytes": 315,
+          "elapsedMs": 2.905399999988731
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+        "startedAt": "2026-10-05T17:39:18.135Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "numero-necessario-para-tratar",
+            "main": [
+              "20",
+              "pacientes"
+            ],
+            "label": "NNH (número necessário para causar dano)",
+            "raw": {
+              "arr": -4.999999999999999,
+              "rrr": -49.999999999999986,
+              "nnt": 20.000000000000004,
+              "shown": 20,
+              "arrLo": -14.140663579204082,
+              "arrHi": 4.1406635792040865
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "b2b3b39f706f8cf704402c07275920b971e891302a3ac19292009eb1e22c2145",
+        "bytes": 315,
+        "elapsedMs": 2.905399999988731
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.arr",
+            "expected": -5,
+            "obtained": -4.999999999999999,
+            "tolerance": 1e-8,
+            "difference": 8.881784197001252e-16,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.shown",
+            "expected": 20,
+            "obtained": 20,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.arr",
+            "expected": -4.999999999999999,
+            "obtained": -4.999999999999999,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.rrr",
+            "expected": -49.999999999999986,
+            "obtained": -49.999999999999986,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.nnt",
+            "expected": 20.000000000000004,
+            "obtained": 20.000000000000004,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.shown",
+            "expected": 20,
+            "obtained": 20,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.arrLo",
+            "expected": -14.140663579204082,
+            "obtained": -14.140663579204082,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.arrHi",
+            "expected": 4.1406635792040865,
+            "obtained": 4.1406635792040865,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "20",
+            "obtained": "20",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "pacientes",
+            "obtained": "pacientes",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          },
+          {
+            "key": "verdict",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "numero-necessario-para-tratar",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "Riscos iguais (10/100 e 10/100): NNT infinito",
+      "originalInput": {
+        "ec": 10,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "input": {
+        "ec": 10,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "amendments": [],
+      "expected": {
+        "main": "∞",
+        "verdict": "sem diferença"
+      },
+      "recordedResult": {
+        "main": [
+          "∞",
+          ""
+        ],
+        "label": "NNT",
+        "raw": {
+          "arr": 0,
+          "rrr": 0,
+          "nnt": null
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "ec": 10,
+            "nc": 100,
+            "et": 10,
+            "nt": 100
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+          "startedAt": "2026-10-05T17:39:18.449Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "numero-necessario-para-tratar",
+              "main": [
+                "∞",
+                ""
+              ],
+              "label": "NNT",
+              "raw": {
+                "arr": 0,
+                "rrr": 0,
+                "nnt": null
+              },
+              "metricStates": {
+                "nnt": {
+                  "kind": "positive-infinity",
+                  "value": null,
+                  "symbol": "∞",
+                  "reasonCode": "NEAR_ZERO_ABSOLUTE_RISK_DIFFERENCE"
+                }
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "9fb2d2f08238c3f8820858215513f5371b31d3be5a5bf8625ee996dd6a6a1265",
+          "bytes": 283,
+          "elapsedMs": 3.4444000000075903
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+        "startedAt": "2026-10-05T17:39:18.449Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "numero-necessario-para-tratar",
+            "main": [
+              "∞",
+              ""
+            ],
+            "label": "NNT",
+            "raw": {
+              "arr": 0,
+              "rrr": 0,
+              "nnt": null
+            },
+            "metricStates": {
+              "nnt": {
+                "kind": "positive-infinity",
+                "value": null,
+                "symbol": "∞",
+                "reasonCode": "NEAR_ZERO_ABSOLUTE_RISK_DIFFERENCE"
+              }
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "9fb2d2f08238c3f8820858215513f5371b31d3be5a5bf8625ee996dd6a6a1265",
+        "bytes": 283,
+        "elapsedMs": 3.4444000000075903
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "∞",
+            "obtained": "∞",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.arr",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.rrr",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.nnt",
+            "expected": null,
+            "obtained": null,
+            "scope": "Existing source-audit transport regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "∞",
+            "obtained": "∞",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "verdict",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "numero-necessario-para-tratar",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "Mais eventos que participantes: erro",
+      "originalInput": {
+        "ec": 120,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "input": {
+        "ec": 120,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "amendments": [],
+      "expected": {
+        "error": true
+      },
+      "recordedResult": {
+        "error": "O número de eventos não pode ser maior que o total do grupo."
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "ec": 120,
+            "nc": 100,
+            "et": 10,
+            "nt": 100
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+          "startedAt": "2026-10-05T17:39:18.764Z",
+          "status": 422,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "error": "O número de eventos não pode ser maior que o total do grupo.",
+            "code": "FORMULA_DOMAIN"
+          },
+          "responseSha256": "5dc7f39540b907c85133c0c15c5b84b54ddcdd12d7b90559e55d55a1d8fb0e2e",
+          "bytes": 98,
+          "elapsedMs": 4.382699999987381
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/numero-necessario-para-tratar/calculate",
+        "startedAt": "2026-10-05T17:39:18.764Z",
+        "status": 422,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "error": "O número de eventos não pode ser maior que o total do grupo.",
+          "code": "FORMULA_DOMAIN"
+        },
+        "responseSha256": "5dc7f39540b907c85133c0c15c5b84b54ddcdd12d7b90559e55d55a1d8fb0e2e",
+        "bytes": 98,
+        "elapsedMs": 4.382699999987381
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "recorded-rejection",
+            "expected": "4xx with error and no result",
+            "obtained": {
+              "status": 422,
+              "error": "O número de eventos não pode ser maior que o total do grupo.",
+              "result": false
+            },
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}
