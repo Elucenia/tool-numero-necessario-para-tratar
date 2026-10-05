@@ -3,14 +3,14 @@
     "id": "numero-necessario-para-tratar",
     "title": "NNT e NNH (número necessário para tratar)",
     "short": "NNT, RRA, RRR e risco relativo de um ensaio clínico",
+    "desc": "Calcule o NNT (ou NNH), a redução absoluta e relativa do risco e o risco relativo a partir dos eventos nos grupos tratado e controle, com IC 95%.",
+    "lead": "Traduz o resultado de um ensaio clínico ou coorte em quantos pacientes precisam ser tratados para evitar (NNT) ou causar (NNH) um evento a mais que o controle.",
+    "kind": "Calculadora",
     "spec": [
       "medicina-preventiva-e-social",
       "medicina-de-familia-e-comunidade",
       "clinica-medica"
     ],
-    "tier": 1,
-    "desc": "Calcule o NNT (ou NNH), a redução absoluta e relativa do risco e o risco relativo a partir dos eventos nos grupos tratado e controle, com IC 95%.",
-    "lead": "Traduz o resultado de um ensaio clínico ou coorte em quantos pacientes precisam ser tratados para evitar (NNT) ou causar (NNH) um evento a mais que o controle.",
     "fields": [
       [
         "ec",
@@ -20,7 +20,8 @@
           "min": 0,
           "max": 1000000,
           "step": 1,
-          "ph": "20"
+          "ph": "20",
+          "integer": true
         }
       ],
       [
@@ -31,7 +32,8 @@
           "min": 1,
           "max": 1000000,
           "step": 1,
-          "ph": "100"
+          "ph": "100",
+          "integer": true
         }
       ],
       [
@@ -42,7 +44,8 @@
           "min": 0,
           "max": 1000000,
           "step": 1,
-          "ph": "10"
+          "ph": "10",
+          "integer": true
         }
       ],
       [
@@ -53,40 +56,12 @@
           "min": 1,
           "max": 1000000,
           "step": 1,
-          "ph": "100"
+          "ph": "100",
+          "integer": true
         }
       ]
     ],
     "formula": "<p>RC = eventos/total no controle · RT = eventos/total no tratado · <strong>RRA</strong> = RC − RT · <strong>RRR</strong> = RRA / RC · <strong>RR</strong> = RT / RC.</p><p><strong>NNT</strong> = 1 / RRA, arredondado para cima. Se o tratamento aumenta o evento (RRA negativa), o resultado é o <strong>NNH</strong> = 1 / |RRA|.</p><p>IC 95% da RRA pelo método de Wald: RRA ± 1,96 × √[RC(1 − RC)/n<sub>C</sub> + RT(1 − RT)/n<sub>T</sub>]. O IC do NNT é o inverso dos limites (Altman, 1998); se a RRA inclui zero, o IC do NNT vai do benefício ao infinito e ao dano.</p>",
-    "table": [
-      [
-        "Medida",
-        "O que informa"
-      ],
-      [
-        "RRA",
-        "Diferença absoluta de risco: depende do risco basal"
-      ],
-      [
-        "RRR",
-        "Proporção do risco basal que é evitada: costuma ser estável entre populações"
-      ],
-      [
-        "NNT",
-        "Pacientes tratados, pelo tempo do estudo, para evitar 1 evento"
-      ],
-      [
-        "NNH",
-        "Pacientes tratados para causar 1 evento adverso a mais"
-      ]
-    ],
-    "tips": [
-      "Informe sempre o <strong>tempo de seguimento</strong>: um NNT de 50 em 5 anos não é comparável a um NNT de 50 em 6 meses.",
-      "A RRR costuma ser semelhante entre populações, mas o NNT não: para o seu paciente, estime NNT ≈ 1 / (risco basal individual × RRR).",
-      "RRR impressionante com risco basal baixo gera NNT alto: desconfie de propagandas que só mostram a redução relativa.",
-      "Compare o NNT do benefício com o NNH dos efeitos adversos relevantes do mesmo tratamento antes de decidir.",
-      "Quando o IC da RRA inclui zero, o efeito não é significativo e o NNT não deve ser apresentado sem o intervalo."
-    ],
     "sources": [
       [
         "Laupacis A, Sackett DL, Roberts RS. An assessment of clinically useful measures of the consequences of treatment. N Engl J Med, 1988.",
@@ -95,6 +70,14 @@
       [
         "Altman DG. Confidence intervals for the number needed to treat. BMJ, 1998.",
         "https://doi.org/10.1136/bmj.317.7168.1309"
+      ],
+      [
+        "Altman1998",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC1114210/"
+      ],
+      [
+        "Altman/Andersen1999",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC1117211/"
       ]
     ],
     "cases": [
@@ -161,9 +144,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -176,29 +156,173 @@
       "testedAt": "2026-09-25",
       "total": 1,
       "passed": 1,
-      "cases": [
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "NNT/NNH/Laupacis 1988; ARR Wald 95%; inversão ICAltman 1998; arredondamentoparateto",
+    "implementationVersion": "numero-necessario-para-tratar@native-2026-10-03+ccc995c68ea4",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/3374545/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "RC = eventos/total no controle · RT = eventos/total no tratado · RRA = RC − RT · RRR = RRA / RC · RR = RT / RC. NNT = 1 / RRA, arredondado para cima. Se o tratamento aumenta o evento (RRA negativa), o resultado é o NNH = 1 / |RRA|. IC 95% da RRA pelo método de Wald: RRA ± 1,96 × √[RC(1 − RC)/n C + RT(1 − RT)/n T ]. O IC do NNT é o inverso dos limites (Altman, 1998); se a RRA inclui zero, o IC do NNT vai do benefício ao infinito e ao dano.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "ec",
+            "label": "Eventos no grupo controle",
+            "type": "num",
+            "min": 0,
+            "max": 1000000,
+            "optional": false,
+            "options": null,
+            "integer": true
+          },
+          {
+            "key": "nc",
+            "label": "Total de participantes do grupo controle",
+            "type": "num",
+            "min": 1,
+            "max": 1000000,
+            "optional": false,
+            "options": null,
+            "integer": true
+          },
+          {
+            "key": "et",
+            "label": "Eventos no grupo tratado (intervenção)",
+            "type": "num",
+            "min": 0,
+            "max": 1000000,
+            "optional": false,
+            "options": null,
+            "integer": true
+          },
+          {
+            "key": "nt",
+            "label": "Total de participantes do grupo tratado",
+            "type": "num",
+            "min": 1,
+            "max": 1000000,
+            "optional": false,
+            "options": null,
+            "integer": true
+          }
+        ],
+        "hash": "bc4329648112654cc8f12e16fb441ec4b2302f617a1d7e7f437cc61f03ac430b"
+      },
+      "sourceEditions": [
         {
-          "label": "Risco30% para10%: RRA20% e NNT5",
-          "input": {
-            "ec": 30,
-            "nc": 100,
-            "et": 10,
-            "nt": 100
+          "citation": "Laupacis A, Sackett DL, Roberts RS. An assessment of clinically useful measures of the consequences of treatment. N Engl J Med, 1988.",
+          "url": "https://doi.org/10.1056/NEJM198806303182605",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "An assessment of clinically useful measures of the consequences of treatment.",
+            "year": "1988",
+            "firstPublicationDate": "1988-06-01",
+            "doi": "10.1056/nejm198806303182605",
+            "pmid": "3374545",
+            "journal": "The New England journal of medicine",
+            "authors": "Laupacis A, Sackett DL, Roberts RS."
           },
-          "expected": {
-            "arr": 20,
-            "shown": 5
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/3374545/",
+          "abstractAvailable": false,
+          "fullTextSha256": null,
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Altman DG. Confidence intervals for the number needed to treat. BMJ, 1998.",
+          "url": "https://doi.org/10.1136/bmj.317.7168.1309",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Confidence intervals for the number needed to treat.",
+            "year": "1998",
+            "firstPublicationDate": "1998-11-01",
+            "doi": "10.1136/bmj.317.7168.1309",
+            "pmid": "9804726",
+            "pmcid": "PMC1114210",
+            "journal": "BMJ (Clinical research ed.)",
+            "authors": "Altman DG."
           },
-          "status": "passed",
-          "failures": []
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1114210/",
+          "abstractAvailable": false,
+          "fullTextSha256": null,
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
         }
-      ]
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-09-25",
+        "total": 1,
+        "passed": 1,
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "ccc995c68ea43219632abe9a1c6cefcb1274756c5a7d4b8d068c11bf2fa102fd",
+      "technicalAmendment": {
+        "version": "scientific-metric-states-and-discrete-counts-v1",
+        "scope": "Explicit infinite/undefined metric state encoding; discrete counts only for NNT and 2×2 tables. Finite formula values, source edition and clinical approval status preserved.",
+        "candidateManifestSha256": "b23825d436a8b2af8351515df4605477adb1f2345c194e89b3c0a34c44f1be7d",
+        "clinicalApproval": "not-performed"
+      }
+    },
+    "limits": "NNT ou NNH depende do evento, da população, do risco basal e do período de acompanhamento; use o mesmo desfecho binário indesejável e horizonte nos dois grupos. Não transfira diretamente o valor para outra duração ou população. Dados de tempo até evento com censura exigem métodos de sobrevivência, não simples contagens nesta interface. Diferença de risco zero corresponde a NNT infinito; um intervalo que cruza zero exige interpretação que pode abranger benefício e dano. NNT não significa garantia de benefício para uma pessoa.",
+    "limitsEvidence": {
+      "status": "primary-indexed-original-named-sections-read",
+      "sources": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1114210/",
+          "edition": "Altman1998",
+          "readScope": "Original primary indexed introduction and95%CI/ARR-zero relation read;direct PMC CAPTCHA;not entire paper."
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1117211/",
+          "edition": "Altman/Andersen1999",
+          "readScope": "Primary indexed Summary,Time-to-event,Methods and Discussion read:time horizon essential;survival probabilities/censoring differ from raw binary counts. Direct PMC CAPTCHA."
+        }
+      ],
+      "populationScope": "Two-group binary adverse outcome over the same follow-up horizon.",
+      "remainingChecks": [
+        "Full1998 article and all local Wald interval implementation conditions not read.",
+        "No survival-NNT calculation implemented here."
+      ],
+      "clinicalValidation": "not-performed",
+      "professionalLanguageReview": "not-performed",
+      "rightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/numero-necessario-para-tratar/calculator.js",
+    "bytes": 7744,
+    "sha256": "ccc995c68ea43219632abe9a1c6cefcb1274756c5a7d4b8d068c11bf2fa102fd"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "acae4cb53f9ad47e92e7093a43d2d327a6c912dd39398fec0617f3d08497e6fa",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 1,
+      "sha256": "672e6c277e53ec6e01b5f52caa10288ec2f3718c7f94ebf3e971b6d2076cbefb",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 1,
+      "sha256": "672e6c277e53ec6e01b5f52caa10288ec2f3718c7f94ebf3e971b6d2076cbefb",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

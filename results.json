@@ -1,0 +1,472 @@
+{
+  "id": "numero-necessario-para-tratar",
+  "at": "2026-10-05T17:29:58.787Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/numero-necessario-para-tratar/calculator.js",
+    "bytes": 7744,
+    "sha256": "ccc995c68ea43219632abe9a1c6cefcb1274756c5a7d4b8d068c11bf2fa102fd"
+  },
+  "cases": [
+    {
+      "name": "Controle 20/100, tratado 10/100: RRA 10%, RRR 50%, NNT 10 (IC da RRA 0,2% a 19,8%)",
+      "input": {
+        "ec": 20,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "obtained": {
+        "id": "numero-necessario-para-tratar",
+        "main": [
+          "10",
+          "pacientes"
+        ],
+        "label": "NNT (número necessário para tratar)",
+        "raw": {
+          "arr": 10,
+          "rrr": 50,
+          "nnt": 10,
+          "shown": 10,
+          "arrLo": 0.2001799999999998,
+          "arrHi": 19.79982
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "10",
+          "obtained": "10",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.arr",
+          "expected": 10,
+          "obtained": 10,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.rrr",
+          "expected": 50,
+          "obtained": 50,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.shown",
+          "expected": 10,
+          "obtained": 10,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.arrLo",
+          "expected": 0.2,
+          "obtained": 0.2001799999999998,
+          "tolerance": 0.050000010000000004,
+          "difference": 0.00017999999999979144,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.arrHi",
+          "expected": 19.8,
+          "obtained": 19.79982,
+          "tolerance": 0.050000010000000004,
+          "difference": 0.00018000000000029104,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.arr",
+          "expected": 10,
+          "obtained": 10,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.rrr",
+          "expected": 50,
+          "obtained": 50,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.nnt",
+          "expected": 10,
+          "obtained": 10,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.shown",
+          "expected": 10,
+          "obtained": 10,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.arrLo",
+          "expected": 0.2001799999999998,
+          "obtained": 0.2001799999999998,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.arrHi",
+          "expected": 19.79982,
+          "obtained": 19.79982,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "10",
+          "obtained": "10",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "pacientes",
+          "obtained": "pacientes",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Controle 10/100, tratado 15/100: RRA −5%, NNH 20",
+      "input": {
+        "ec": 10,
+        "nc": 100,
+        "et": 15,
+        "nt": 100
+      },
+      "obtained": {
+        "id": "numero-necessario-para-tratar",
+        "main": [
+          "20",
+          "pacientes"
+        ],
+        "label": "NNH (número necessário para causar dano)",
+        "raw": {
+          "arr": -4.999999999999999,
+          "rrr": -49.999999999999986,
+          "nnt": 20.000000000000004,
+          "shown": 20,
+          "arrLo": -14.140663579204082,
+          "arrHi": 4.1406635792040865
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.arr",
+          "expected": -5,
+          "obtained": -4.999999999999999,
+          "tolerance": 1e-8,
+          "difference": 8.881784197001252e-16,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.shown",
+          "expected": 20,
+          "obtained": 20,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.arr",
+          "expected": -4.999999999999999,
+          "obtained": -4.999999999999999,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.rrr",
+          "expected": -49.999999999999986,
+          "obtained": -49.999999999999986,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.nnt",
+          "expected": 20.000000000000004,
+          "obtained": 20.000000000000004,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.shown",
+          "expected": 20,
+          "obtained": 20,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.arrLo",
+          "expected": -14.140663579204082,
+          "obtained": -14.140663579204082,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.arrHi",
+          "expected": 4.1406635792040865,
+          "obtained": 4.1406635792040865,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "20",
+          "obtained": "20",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "pacientes",
+          "obtained": "pacientes",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Riscos iguais (10/100 e 10/100): NNT infinito",
+      "input": {
+        "ec": 10,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "obtained": {
+        "id": "numero-necessario-para-tratar",
+        "main": [
+          "∞",
+          ""
+        ],
+        "label": "NNT",
+        "raw": {
+          "arr": 0,
+          "rrr": 0,
+          "nnt": null
+        },
+        "metricStates": {
+          "nnt": {
+            "kind": "positive-infinity",
+            "value": null,
+            "symbol": "∞",
+            "reasonCode": "NEAR_ZERO_ABSOLUTE_RISK_DIFFERENCE"
+          }
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "∞",
+          "obtained": "∞",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.arr",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.rrr",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.nnt",
+          "expected": null,
+          "obtained": null,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "∞",
+          "obtained": "∞",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Mais eventos que participantes: erro",
+      "input": {
+        "ec": 120,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "obtained": {
+        "error": "O número de eventos não pode ser maior que o total do grupo.",
+        "code": "FORMULA_DOMAIN"
+      },
+      "checks": [
+        {
+          "at": "recorded-rejection",
+          "expected": "4xx with error and no result",
+          "obtained": {
+            "status": 422,
+            "error": "O número de eventos não pode ser maior que o total do grupo.",
+            "result": false
+          },
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 48,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

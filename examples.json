@@ -1,6 +1,15 @@
 [
   {
-    "label": "Controle 20/100, tratado 10/100: RRA 10%, RRR 50%, NNT 10 (IC da RRA 0,2% a 19,8%)",
+    "id": "numero-necessario-para-tratar",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Controle 20/100, tratado 10/100: RRA 10%, RRR 50%, NNT 10 (IC da RRA 0,2% a 19,8%)",
+    "originalInput": {
+      "ec": 20,
+      "nc": 100,
+      "et": 10,
+      "nt": 100
+    },
     "input": {
       "ec": 20,
       "nc": 100,
@@ -18,16 +27,41 @@
       "main": "10",
       "level": "low"
     },
-    "originalInput": {
-      "ec": 20,
-      "nc": 100,
-      "et": 10,
-      "nt": 100
+    "recordedResult": {
+      "main": [
+        "10",
+        "pacientes"
+      ],
+      "label": "NNT (número necessário para tratar)",
+      "raw": {
+        "arr": 10,
+        "rrr": 50,
+        "nnt": 10,
+        "shown": 10,
+        "arrLo": 0.2001799999999998,
+        "arrHi": 19.79982
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Controle 10/100, tratado 15/100: RRA −5%, NNH 20",
+    "id": "numero-necessario-para-tratar",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Controle 10/100, tratado 15/100: RRA −5%, NNH 20",
+    "originalInput": {
+      "ec": 10,
+      "nc": 100,
+      "et": 15,
+      "nt": 100
+    },
     "input": {
       "ec": 10,
       "nc": 100,
@@ -42,16 +76,41 @@
       "level": "high",
       "verdict": "dano"
     },
+    "recordedResult": {
+      "main": [
+        "20",
+        "pacientes"
+      ],
+      "label": "NNH (número necessário para causar dano)",
+      "raw": {
+        "arr": -4.999999999999999,
+        "rrr": -49.999999999999986,
+        "nnt": 20.000000000000004,
+        "shown": 20,
+        "arrLo": -14.140663579204082,
+        "arrHi": 4.1406635792040865
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "numero-necessario-para-tratar",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Riscos iguais (10/100 e 10/100): NNT infinito",
     "originalInput": {
       "ec": 10,
       "nc": 100,
-      "et": 15,
+      "et": 10,
       "nt": 100
     },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Riscos iguais (10/100 e 10/100): NNT infinito",
     "input": {
       "ec": 10,
       "nc": 100,
@@ -62,16 +121,38 @@
       "main": "∞",
       "verdict": "sem diferença"
     },
+    "recordedResult": {
+      "main": [
+        "∞",
+        ""
+      ],
+      "label": "NNT",
+      "raw": {
+        "arr": 0,
+        "rrr": 0,
+        "nnt": null
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "numero-necessario-para-tratar",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "Mais eventos que participantes: erro",
     "originalInput": {
-      "ec": 10,
+      "ec": 120,
       "nc": 100,
       "et": 10,
       "nt": 100
     },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Mais eventos que participantes: erro",
     "input": {
       "ec": 120,
       "nc": 100,
@@ -81,12 +162,16 @@
     "expected": {
       "error": true
     },
-    "originalInput": {
-      "ec": 120,
-      "nc": 100,
-      "et": 10,
-      "nt": 100
+    "recordedResult": {
+      "error": "O número de eventos não pode ser maior que o total do grupo."
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]
