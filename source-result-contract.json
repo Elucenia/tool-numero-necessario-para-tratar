@@ -1,0 +1,308 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "numero-necessario-para-tratar",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "937ea65fca3a0a4f90f26486053c092b1d9e419f",
+    "oldEngineSha256": "ccc995c68ea43219632abe9a1c6cefcb1274756c5a7d4b8d068c11bf2fa102fd",
+    "currentEngineSha256": "c102616b1b59c1f41a357222ab4c2ceb3ecd9b38e8d0eff391a246f992fa2805"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Controle 20/100, tratado 10/100: RRA 10%, RRR 50%, NNT 10 (IC da RRA 0,2% a 19,8%)",
+      "input": {
+        "ec": 20,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "publicOutput": {
+        "id": "numero-necessario-para-tratar",
+        "main": [
+          "10",
+          "pacientes"
+        ],
+        "label": "NNT (número necessário para tratar)",
+        "raw": {
+          "arr": 10,
+          "rrr": 50,
+          "nnt": 10,
+          "shown": 10,
+          "arrLo": 0.2001799999999998,
+          "arrHi": 19.79982
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "arr": 10,
+          "rrr": 50,
+          "shown": 10,
+          "arrLo": 0.2,
+          "arrHi": 19.8
+        },
+        "main": "10",
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "10",
+          "pacientes"
+        ],
+        "label": "NNT (número necessário para tratar)",
+        "level": "low",
+        "verdict": "Tratar 10 pacientes evita 1 evento a mais que o controle",
+        "rows": [
+          [
+            "Risco no grupo controle (RC)",
+            "20,0%"
+          ],
+          [
+            "Risco no grupo tratado (RT)",
+            "10,0%"
+          ],
+          [
+            "Redução absoluta do risco (RRA)",
+            "10,0% (IC 95%: 0,2% a 19,8%)"
+          ],
+          [
+            "Redução relativa do risco (RRR)",
+            "50,0%"
+          ],
+          [
+            "Risco relativo (RT/RC)",
+            "0,50"
+          ],
+          [
+            "IC 95% do NNT",
+            "5,1 a 499,6 (benefício)"
+          ]
+        ],
+        "note": "",
+        "raw": {
+          "arr": 10,
+          "rrr": 50,
+          "nnt": 10,
+          "shown": 10,
+          "arrLo": 0.2001799999999998,
+          "arrHi": 19.79982
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Controle 10/100, tratado 15/100: RRA −5%, NNH 20",
+      "input": {
+        "ec": 10,
+        "nc": 100,
+        "et": 15,
+        "nt": 100
+      },
+      "publicOutput": {
+        "id": "numero-necessario-para-tratar",
+        "main": [
+          "20",
+          "pacientes"
+        ],
+        "label": "NNH (número necessário para causar dano)",
+        "raw": {
+          "arr": -4.999999999999999,
+          "rrr": -49.999999999999986,
+          "nnt": 20.000000000000004,
+          "shown": 20,
+          "arrLo": -14.140663579204082,
+          "arrHi": 4.1406635792040865
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "arr": -5,
+          "shown": 20
+        },
+        "level": "high",
+        "verdict": "dano"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "20",
+          "pacientes"
+        ],
+        "label": "NNH (número necessário para causar dano)",
+        "level": "high",
+        "verdict": "A cada 20 pacientes tratados, ocorre 1 evento a mais que no controle (dano)",
+        "rows": [
+          [
+            "Risco no grupo controle (RC)",
+            "10,0%"
+          ],
+          [
+            "Risco no grupo tratado (RT)",
+            "15,0%"
+          ],
+          [
+            "Redução absoluta do risco (RRA)",
+            "-5,0% (IC 95%: -14,1% a 4,1%)"
+          ],
+          [
+            "Redução relativa do risco (RRR)",
+            "-50,0%"
+          ],
+          [
+            "Risco relativo (RT/RC)",
+            "1,50"
+          ],
+          [
+            "IC 95% do NNH",
+            "NNT (benefício) 24,2 a ∞ a NNH (dano) 7,1: diferença não significativa"
+          ]
+        ],
+        "note": "O intervalo de confiança da RRA inclui zero: o efeito não é estatisticamente significativo.",
+        "raw": {
+          "arr": -4.999999999999999,
+          "rrr": -49.999999999999986,
+          "nnt": 20.000000000000004,
+          "shown": 20,
+          "arrLo": -14.140663579204082,
+          "arrHi": 4.1406635792040865
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Riscos iguais (10/100 e 10/100): NNT infinito",
+      "input": {
+        "ec": 10,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "publicOutput": {
+        "id": "numero-necessario-para-tratar",
+        "main": [
+          "∞",
+          ""
+        ],
+        "label": "NNT",
+        "raw": {
+          "arr": 0,
+          "rrr": 0,
+          "nnt": null
+        },
+        "metricStates": {
+          "nnt": {
+            "kind": "positive-infinity",
+            "value": null,
+            "symbol": "∞",
+            "reasonCode": "NEAR_ZERO_ABSOLUTE_RISK_DIFFERENCE"
+          }
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "main": "∞",
+        "verdict": "sem diferença"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "∞",
+          ""
+        ],
+        "label": "NNT",
+        "level": "info",
+        "verdict": "Sem diferença de risco entre os grupos: o NNT é infinito",
+        "rows": [
+          [
+            "Risco no grupo controle (RC)",
+            "10,0%"
+          ],
+          [
+            "Risco no grupo tratado (RT)",
+            "10,0%"
+          ],
+          [
+            "Redução absoluta do risco (RRA)",
+            "0,0% (IC 95%: -8,3% a 8,3%)"
+          ],
+          [
+            "Redução relativa do risco (RRR)",
+            "0,0%"
+          ],
+          [
+            "Risco relativo (RT/RC)",
+            "1,00"
+          ]
+        ],
+        "raw": {
+          "arr": 0,
+          "rrr": 0,
+          "nnt": null
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 3,
+      "name": "Mais eventos que participantes: erro",
+      "input": {
+        "ec": 120,
+        "nc": 100,
+        "et": 10,
+        "nt": 100
+      },
+      "publicOutput": {
+        "error": "O número de eventos não pode ser maior que o total do grupo.",
+        "code": "FORMULA_DOMAIN"
+      },
+      "sourceExpected": {
+        "error": true
+      },
+      "state": "existing-rejection"
+    }
+  ]
+}

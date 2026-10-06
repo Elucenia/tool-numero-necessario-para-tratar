@@ -85,3 +85,50 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Tratar 10 pacientes evita 1 evento a mais que o controle
+
+| Detalhes do resultado | |
+| --- | --- |
+| Risco no grupo controle (RC) | 20,0% |
+| Risco no grupo tratado (RT) | 10,0% |
+| Redução absoluta do risco (RRA) | 10,0% (IC 95%: 0,2% a 19,8%) |
+| Redução relativa do risco (RRR) | 50,0% |
+| Risco relativo (RT/RC) | 0,50 |
+| IC 95% do NNT | 5,1 a 499,6 (benefício) |
+
+
+### 2
+
+A cada 20 pacientes tratados, ocorre 1 evento a mais que no controle (dano)
+
+| Detalhes do resultado | |
+| --- | --- |
+| Risco no grupo controle (RC) | 10,0% |
+| Risco no grupo tratado (RT) | 15,0% |
+| Redução absoluta do risco (RRA) | -5,0% (IC 95%: -14,1% a 4,1%) |
+| Redução relativa do risco (RRR) | -50,0% |
+| Risco relativo (RT/RC) | 1,50 |
+| IC 95% do NNH | NNT (benefício) 24,2 a ∞ a NNH (dano) 7,1: diferença não significativa |
+
+O intervalo de confiança da RRA inclui zero: o efeito não é estatisticamente significativo.
+
+
+### 3
+
+Sem diferença de risco entre os grupos: o NNT é infinito
+
+| Detalhes do resultado | |
+| --- | --- |
+| Risco no grupo controle (RC) | 10,0% |
+| Risco no grupo tratado (RT) | 10,0% |
+| Redução absoluta do risco (RRA) | 0,0% (IC 95%: -8,3% a 8,3%) |
+| Redução relativa do risco (RRR) | 0,0% |
+| Risco relativo (RT/RC) | 1,00 |
+

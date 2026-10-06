@@ -85,3 +85,50 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Treating 10 patients prevents 1 more event than control
+
+| Result details | |
+| --- | --- |
+| Risk in the control group (RC) | 20.0% |
+| Risk in the treated group (RT) | 10.0% |
+| Absolute risk reduction (ARR) | 10.0% (95% CI: 0.2% to 19.8%) |
+| Relative risk reduction (RRR) | 50.0% |
+| Relative risk (RT/RC) | 0.50 |
+| 95% CI of NNT | 5.1 to 499.6 (benefit) |
+
+
+### 2
+
+For every 20 patients treated, 1 more event occurs than in control (harm)
+
+| Result details | |
+| --- | --- |
+| Risk in the control group (RC) | 10.0% |
+| Risk in the treated group (RT) | 15.0% |
+| Absolute risk reduction (ARR) | -5.0% (95% CI: -14.1% to 4.1%) |
+| Relative risk reduction (RRR) | -50.0% |
+| Relative risk (RT/RC) | 1.50 |
+| 95% CI of NNH | NNT (benefit) 24.2 to ∞ to NNH (harm) 7.1: non-significant difference |
+
+The ARR confidence interval includes zero: the effect is not statistically significant.
+
+
+### 3
+
+No risk difference between the groups: the NNT is infinite
+
+| Result details | |
+| --- | --- |
+| Risk in the control group (RC) | 10.0% |
+| Risk in the treated group (RT) | 10.0% |
+| Absolute risk reduction (ARR) | 0.0% (95% CI: -8.3% to 8.3%) |
+| Relative risk reduction (RRR) | 0.0% |
+| Relative risk (RT/RC) | 1.00 |
+

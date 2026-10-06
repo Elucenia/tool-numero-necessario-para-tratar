@@ -85,3 +85,50 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Traiter 10 patients évite 1 événement de plus que le contrôle
+
+| Détails du résultat | |
+| --- | --- |
+| Risque dans le groupe témoin (RC) | 20,0% |
+| Risque dans le groupe traité (RT) | 10,0% |
+| Réduction absolue du risque (RAR) | 10,0% (IC 95 % : 0,2 % à 19,8 %) |
+| Réduction relative du risque (RRR) | 50,0% |
+| Risque relatif (RT/RC) | 0,50 |
+| IC 95 % du NNT | 5,1 à 499,6 (bénéfice) |
+
+
+### 2
+
+Pour 20 patients traités, 1 événement supplémentaire survient par rapport au contrôle (préjudice)
+
+| Détails du résultat | |
+| --- | --- |
+| Risque dans le groupe témoin (RC) | 10,0% |
+| Risque dans le groupe traité (RT) | 15,0% |
+| Réduction absolue du risque (RAR) | -5,0% (IC 95 % : -14,1 % à 4,1 %) |
+| Réduction relative du risque (RRR) | -50,0% |
+| Risque relatif (RT/RC) | 1,50 |
+| IC 95 % du NNH | NNT (bénéfice) 24,2 à ∞ à NNH (préjudice) 7,1 : différence non significative |
+
+L’intervalle de confiance de la RAR inclut zéro : l’effet n’est pas statistiquement significatif.
+
+
+### 3
+
+Aucune différence de risque entre les groupes : le NNT est infini
+
+| Détails du résultat | |
+| --- | --- |
+| Risque dans le groupe témoin (RC) | 10,0% |
+| Risque dans le groupe traité (RT) | 10,0% |
+| Réduction absolue du risque (RAR) | 0,0% (IC 95 % : -8,3 % à 8,3 %) |
+| Réduction relative du risque (RRR) | 0,0% |
+| Risque relatif (RT/RC) | 1,00 |
+

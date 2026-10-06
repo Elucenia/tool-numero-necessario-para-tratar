@@ -159,7 +159,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "NNT/NNH/Laupacis 1988; ARR Wald 95%; inversão ICAltman 1998; arredondamentoparateto",
-    "implementationVersion": "numero-necessario-para-tratar@native-2026-10-03+ccc995c68ea4",
+    "implementationVersion": "numero-necessario-para-tratar@native-2026-10-05+c102616b1b59",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/3374545/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -270,13 +270,41 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "ccc995c68ea43219632abe9a1c6cefcb1274756c5a7d4b8d068c11bf2fa102fd",
+      "implementationHash": "c102616b1b59c1f41a357222ab4c2ceb3ecd9b38e8d0eff391a246f992fa2805",
       "technicalAmendment": {
         "version": "scientific-metric-states-and-discrete-counts-v1",
         "scope": "Explicit infinite/undefined metric state encoding; discrete counts only for NNT and 2×2 tables. Finite formula values, source edition and clinical approval status preserved.",
         "candidateManifestSha256": "b23825d436a8b2af8351515df4605477adb1f2345c194e89b3c0a34c44f1be7d",
         "clinicalApproval": "not-performed"
-      }
+      },
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "numero-necessario-para-tratar@native-2026-10-03+ccc995c68ea4",
+          "previousImplementationHash": "ccc995c68ea43219632abe9a1c6cefcb1274756c5a7d4b8d068c11bf2fa102fd",
+          "implementationHash": "c102616b1b59c1f41a357222ab4c2ceb3ecd9b38e8d0eff391a246f992fa2805",
+          "scientificBodySha256": "3170ff45da93161cfe643280bdedcc8834c3022c7ef338b552486e55e2dcc042",
+          "metadataContractHash": "bc4329648112654cc8f12e16fb441ec4b2302f617a1d7e7f437cc61f03ac430b",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "NNT ou NNH depende do evento, da população, do risco basal e do período de acompanhamento; use o mesmo desfecho binário indesejável e horizonte nos dois grupos. Não transfira diretamente o valor para outra duração ou população. Dados de tempo até evento com censura exigem métodos de sobrevivência, não simples contagens nesta interface. Diferença de risco zero corresponde a NNT infinito; um intervalo que cruza zero exige interpretação que pode abranger benefício e dano. NNT não significa garantia de benefício para uma pessoa.",
     "limitsEvidence": {
@@ -306,20 +334,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/numero-necessario-para-tratar/calculator.js",
-    "bytes": 7744,
-    "sha256": "ccc995c68ea43219632abe9a1c6cefcb1274756c5a7d4b8d068c11bf2fa102fd"
+    "bytes": 7949,
+    "sha256": "c102616b1b59c1f41a357222ab4c2ceb3ecd9b38e8d0eff391a246f992fa2805"
   },
-  "sourceToolSha256": "acae4cb53f9ad47e92e7093a43d2d327a6c912dd39398fec0617f3d08497e6fa",
+  "sourceToolSha256": "959e98f374c8c012ffd96e903a16ae4153112fefaffde28157e69cbde6094842",
   "omittedFullReferenceBanks": [
     {
       "rows": 1,
       "sha256": "672e6c277e53ec6e01b5f52caa10288ec2f3718c7f94ebf3e971b6d2076cbefb",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 1,
       "sha256": "672e6c277e53ec6e01b5f52caa10288ec2f3718c7f94ebf3e971b6d2076cbefb",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

@@ -85,3 +85,50 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Die Behandlung von 10 Patienten verhindert 1 Ereignis mehr als die Kontrolle
+
+| Ergebnisdetails | |
+| --- | --- |
+| Risiko in der Kontrollgruppe (RC) | 20,0% |
+| Risiko in der Behandlungsgruppe (RT) | 10,0% |
+| Absolute Risikoreduktion (ARR) | 10,0% (95%-KI: 0,2% bis 19,8%) |
+| Relative Risikoreduktion (RRR) | 50,0% |
+| Relatives Risiko (RT/RC) | 0,50 |
+| 95%-KI des NNT | 5,1 bis 499,6 (Nutzen) |
+
+
+### 2
+
+Pro 20 behandelten Patienten tritt 1 Ereignis mehr auf als in der Kontrolle (Schaden)
+
+| Ergebnisdetails | |
+| --- | --- |
+| Risiko in der Kontrollgruppe (RC) | 10,0% |
+| Risiko in der Behandlungsgruppe (RT) | 15,0% |
+| Absolute Risikoreduktion (ARR) | -5,0% (95%-KI: -14,1% bis 4,1%) |
+| Relative Risikoreduktion (RRR) | -50,0% |
+| Relatives Risiko (RT/RC) | 1,50 |
+| 95%-KI des NNH | NNT (Nutzen) 24,2 bis ∞ bis NNH (Schaden) 7,1: kein signifikanter Unterschied |
+
+Das Konfidenzintervall der ARR schließt Null ein: Der Effekt ist statistisch nicht signifikant.
+
+
+### 3
+
+Kein Risikounterschied zwischen den Gruppen: Das NNT ist unendlich
+
+| Ergebnisdetails | |
+| --- | --- |
+| Risiko in der Kontrollgruppe (RC) | 10,0% |
+| Risiko in der Behandlungsgruppe (RT) | 10,0% |
+| Absolute Risikoreduktion (ARR) | 0,0% (95%-KI: -8,3% bis 8,3%) |
+| Relative Risikoreduktion (RRR) | 0,0% |
+| Relatives Risiko (RT/RC) | 1,00 |
+
